@@ -36,7 +36,7 @@ gem "redis", ">= 4.0.1"
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: %i[ windows jruby ]
+gem "tzinfo-data", platforms: %i[ mswin mswin64 mingw x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
@@ -46,21 +46,15 @@ gem "image_processing", "~> 1.13"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri windows ]
+  gem "debug", platforms: %i[ mri mswin mswin64 mingw x64_mingw ]
 end
 
 group :development do
-  # Use console on exceptions pages [https://github.com/rails/web-console]
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
+
+  # Access an interactive console on exception pages or by calling "console" anywhere in the code.
   gem "web-console"
-
-  # Preview emails in the browser [https://github.com/plataformatec/letter_opener]
-  gem "letter_opener"
-
-  # LSP support for Ruby
-  gem 'solargraph'
-  gem 'solargraph-rails'
-  gem 'ruby-lsp'
-  gem 'ruby-lsp-rails'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -69,37 +63,12 @@ group :development do
   # gem "spring"
 end
 
-group :development, :test do
-  gem 'brakeman'
-  gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
-  gem 'rubocop', '~> 1.23.0'
-  gem 'rubocop-performance'
-  gem 'rubocop-rails'
-  gem 'selenium-webdriver', '~> 4.7.1'
-
-  # monitoring
-  gem 'pry'
-  gem 'pry-remote'
-end
-
 group :test do
-  gem 'capybara', '~> 3.39'
-  gem 'capybara-screenshot', '~> 1.0'
-  gem 'email_spec'
-  gem 'factory_bot'
-  gem 'factory_bot_rails'
-  gem 'database_cleaner'
-  gem 'rspec-activemodel-mocks', '~> 1.0'
-  gem 'rspec-rails', '~> 6.1'
-  gem 'rspec-retry'
-  gem 'rspec_junit_formatter'
-  gem 'rubocop-rspec'
-  gem 'jsonapi-rspec'
-  gem 'simplecov'
-  gem 'webmock', '~> 3.7', require: false
-  gem 'timecop'
-  gem 'rails-controller-testing'
-  gem 'webdrivers', '~> 5.0'
+  # Adds support for Capybara system testing and selenium driver
+  gem "capybara"
+
+  # Easy installation and use of web drivers to run system tests with browsers
+  gem "webdrivers"
 end
 
 # Use Sidekiq for background jobs
