@@ -15,7 +15,7 @@ services:
   - type: web
     name: spree-web
     runtime: ruby
-    plan: standard
+    plan: hobby
     buildCommand: bin/render-build.sh
     preDeployCommand: bin/rails db:migrate && bin/rails db:seed
     startCommand: "bundle exec puma -C config/puma.rb"
@@ -36,7 +36,7 @@ services:
   - type: worker
     name: spree-worker
     runtime: ruby
-    plan: standard
+    plan: hobby
     buildCommand: bin/render-build.sh
     startCommand: bundle exec sidekiq
     envVars:
@@ -61,11 +61,11 @@ services:
   - type: keyvalue
     name: keyvalue
     ipAllowList: []
-    plan: starter
+    plan: hobby
     maxmemoryPolicy: noeviction
 
   - type: keyvalue
     name: keyvalue-cache
     ipAllowList: []
-    plan: starter
+    plan: hobby
     maxmemoryPolicy: allkeys-lru
