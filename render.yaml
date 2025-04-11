@@ -6,36 +6,33 @@ envVarGroups:
 
 databases:
   - name: spree-db
-    databaseName: spree_production
+    databaseName: spree
     user: spree
-    plan: free
+    plan: basic-1gb
+    diskSizeGB: 10
 
 services:
   - type: web
     name: spree-web
-    env: ruby
-    plan: free
-    buildCommand: "./bin/render-build.sh"
+    runtime: ruby
+    plan: hobby
+    buildCommand: bin/render-build.sh
+    preDeployCommand: bin/rails db:migrate && bin/rails db:seed
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
-      - key: RAILS_MASTER_KEY
-        sync: false
-      - key: SECRET_KEY_BASE
-        value: 754749b0727d806e70dc958611a503322f28882f2256568fd9c31ce67c696cc4e18fc6a9bb017f228ccd72b89e65a5291dde3a06e37b8c81ab212d3afdcea6b3
       - key: DATABASE_URL
         fromDatabase:
           name: spree-db
           property: connectionString
+      - key: SECRET_KEY_BASE
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
       - key: REDIS_URL
         fromService:
-          name: spree-redis
-          type: redis
+          type: keyvalue
+          name: keyvalue
           property: connectionString
-      - key: RAILS_ENV
-        value: production
-      - key: RAILS_SERVE_STATIC_FILES
-        value: true
-
   - type: worker
     name: spree-worker
     runtime: ruby
@@ -72,7 +69,3 @@ services:
     ipAllowList: []
     plan: hobby
     maxmemoryPolicy: allkeys-lru
-
-redis:
-  - name: spree-redis
-    plan: free
