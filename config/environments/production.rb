@@ -1,4 +1,5 @@
 require "active_support/core_ext/integer/time"
+require_relative '../initializers/redis'
 
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
@@ -37,7 +38,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :cloudflare
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
@@ -69,14 +70,7 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # https://guides.rubyonrails.org/caching_with_rails.html#activesupport-cache-rediscachestore
-  cache_servers = ENV.fetch('REDIS_CACHE_URL', 'redis://localhost:6380/0,redis://localhost:6381/0').split(',')
-  config.cache_store = :redis_cache_store, {
-    url: cache_servers,
-    connect_timeout:    30,  # Defaults to 1 second
-    read_timeout:       0.2, # Defaults to 1 second
-    write_timeout:      0.2, # Defaults to 1 second
-    reconnect_attempts: 2,   # Defaults to 1
-  }
+  config.cache_store = :redis_cache_store, RedisConfig.common_config
 
   # Use a real queuing backend for Active Job (and separate queues per environment).
   config.active_job.queue_adapter = :sidekiq

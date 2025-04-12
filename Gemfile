@@ -86,3 +86,4 @@ gem "spree_admin", spree_opts
 gem "spree_storefront", spree_opts
 gem "spree_stripe", '~> 1.1.0'
 gem "spree_i18n"
+gem "aws-sdk-s3", require: false

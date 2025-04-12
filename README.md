@@ -1,58 +1,83 @@
 # Spree Starter
 
-This is a starter kit for [Spree Commerce](https://spreecommerce.org) - the [open-source eCommerce platform](https://spreecommerce.org) for [Rails](https://spreecommerce.org/category/ruby-on-rails/). 
+This is a starter kit for Spree Commerce - the open-source eCommerce platform for Rails.
 
-It is a great starting point for any Rails developer to quickly build an eCommerce application.
+## Features
 
-This starter uses:
+* **Spree Commerce 5**, the biggest release ever, which includes Admin Dashboard, API and Storefront - everything you need to start developing your eCommerce application
+* **Spree Starter** - a pre-configured application template with all the necessary dependencies and configuration
+* **Spree API** - a modern REST API with detailed documentation, allowing you to build custom storefronts and integrate with any third-party services
+* **Spree Admin** - a feature-rich administration panel for managing your store
+* **Spree Storefront** - a blazing fast, conversion-oriented storefront template
 
-* **[Spree Commerce 5](https://spreecommerce.org/announcing-spree-5-the-biggest-open-source-release-ever/)**, the biggest release ever, which includes Admin Dashboard, API and Storefront - everything you need to start developing your new eCommerce application/store/marketeplace
-* Stripe for payment processing, thanks to the official [Spree Stripe gem](https://github.com/spree/spree_stripe)
-* [Devise](https://github.com/heartcombo/devise) for authentication
-* [Sidekiq](https://github.com/mperham/sidekiq) for background jobs
-* PostgreSQL as a database
-* Redis for caching
+## Getting Started
 
-You don't need to install additional tools or libraries to start developing with Spree Starter. Everything is already set up for you.
-
-If you like what you see, consider giving this repo a GitHub star :star:
-
-Thank you for supporting Spree open-source :heart:
-
-## Local Installation
-
-Please follow [Spree Quickstart guide](https://spreecommerce.org/docs/developer/getting-started/quickstart) to setup your Spree application using the Spree starter.
+Please follow the Spree Quickstart guide to setup your Spree application using the Spree starter.
 
 ## Deployment
 
-Please follow [Deployment guide](https://spreecommerce.org/docs/developer/deployment/render) to quickly deploy your production-ready Spree application.
+Please follow the Deployment guide to quickly deploy your production-ready Spree application.
 
-## Customizing
+## Customization
 
-Please follow [Customization guide](https://spreecommerce.org/docs/developer/customization/quickstart) to learn how to customize and extend your Spree application.
+Please follow the Customization guide to learn how to customize and extend your Spree application.
 
-## Running tests
+## Demo
 
-This repository is pre-configured for running tests of your Spree customizations. To run the full test suite, just type:
+![Spree Commerce - open-source eCommerce platform for Ruby on Rails](https://raw.githubusercontent.com/spree/spree/main/guides/src/images/features/spree_5_open-source_eCommerce_myzurl.jpg)
 
-```bash
-bundle exec rspec
-```
+We're thrilled to unveil Spree 5, which brings a host of new features and improvements:
 
-## Spree 5 Announcement & Demo
+- Completely new Admin Panel with modern UI and UX
+- New API documentation
+- New Storefront
+- Enterprise Edition Admin Features: Audit Log, Multi-Vendor Marketplace, Multi-tenant / White-label SaaS eCommerce
+- And much more!
 
-[![Spree Commerce 5 version](https://vendo-production-res.cloudinary.com/image/upload/w_2000/q_auto/v1742985405/docs/github/Spree_Commerce_open-source_eCommerce_myzurl.jpg)](https://spreecommerce.org/announcing-spree-5-the-biggest-open-source-release-ever/)
+Read the full Spree 5 announcement for more details.
 
-We’re thrilled to unveil [Spree 5](https://spreecommerce.org/announcing-spree-5-the-biggest-open-source-release-ever/
-) — the most powerful and feature-packed open-source release in Spree Commerce’s history, including:
-- A completely revamped Admin Dashboard experience: boost your team's productivity 
-- A Mobile-First, No-code Customizable Storefront: raise conversions and loyalty
-- New integrations: a native [Stripe integration](https://github.com/spree/spree_stripe), and also Stripe Connect, Klaviyo integrations available with the Enterprise Edition
-- Enterprise Edition Admin Features: Audit Log, [Multi-Vendor Marketplace](https://spreecommerce.org/marketplace-ecommerce/), [Multi-tenant / White-label SaaS eCommerce](https://spreecommerce.org/multi-tenant-white-label-ecommerce/)
+Check out the Spree 5 demo for yourself.
 
-Read the [full Spree 5 announcement here](https://spreecommerce.org/announcing-spree-5-the-biggest-open-source-release-ever/).
+## Support
 
-Check out the [Spree 5 demo](https://demo.spreecommerce.org/) for yourself.
+### Community Support
+
+Need help? Join our Slack to meet other 6k+ community members and get some support.
+
+### Enterprise Support
+
+Contact us for enterprise support and custom development services. We offer:
+
+* Project Development
+* Code Review
+* Performance Audit
+* Security Audit
+* DevOps Services
+* Upgrade Support
+
+Besides enterprise support we also offer the Spree Commerce Enterprise Edition that gives you all the tools you need to launch your store or marketplace and provides you with ready-to-use features.
+
+## Use Cases
+
+### A Multi-vendor marketplace
+
+Launch your own marketplace with multiple vendors, each with their own storefront, products, and orders.
+
+### A B2B eCommerce
+
+Launch a B2B eCommerce platform with features like customer-specific pricing, bulk ordering, and approval workflows.
+
+### Wholesale eCommerce
+
+Launch a wholesale eCommerce platform with features like tiered pricing, minimum order quantities, and customer groups.
+
+### A white-label SaaS or multi-tenant eCommerce platform
+
+Launch a multi-tenant eCommerce platform for your customers, resellers, affiliates in any configuration, eg. B2B2B, B2B2C, B2B2E
+
+## Enterprise Edition
+
+To get access to Spree Enterprise (Vendo), contact our Sales team.
 
 ## Troubleshooting
 

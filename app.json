@@ -7,8 +7,8 @@
     "e-commerce",
     "global commerce"
   ],
-  "logo": "https://spreecommerce.org/wp-content/uploads/2019/09/spree-60x60@2x.png",
-  "website": "https://spreecommerce.org",
+  "logo": "https://nexuxbizz.com/logo.png",
+  "website": "https://nexuxbizz.com",
   "repository": "https://github.com/spree/spree_starter",
   "env": {
     "ADMIN_EMAIL": {
