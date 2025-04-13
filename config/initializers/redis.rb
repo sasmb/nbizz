@@ -6,8 +6,7 @@ module RedisConfig
         verify_mode: OpenSSL::SSL::VERIFY_PEER,
         ssl_version: :TLSv1_2
       }.compact,
-      network_timeout: 5,
-      pool_timeout: 5,
+      timeout: 5,
       ssl: true  # Heroku Redis requires SSL
     }.compact
   end
