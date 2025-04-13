@@ -8,20 +8,21 @@ local:
 
 amazon:
   service: S3
-  access_key_id: <%= ENV['S3_ACCESS_KEY'] %>
-  secret_access_key: <%= ENV['S3_SECRET_KEY'] %>
-  region: <%= ENV['S3_REGION'] %>
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  region: <%= ENV['AWS_REGION'] %>
   bucket: <%= ENV['S3_BUCKET'] %>
-  endpoint: <%= ENV['S3_ENDPOINT'] %>
-  force_path_style: <%= ENV['S3_FORCE_PATH_STYLE'] == 'true' %>
 
 cloudflare:
   service: S3
-  endpoint: <%= ENV.fetch("CLOUDFLARE_ENDPOINT", "") %>
-  access_key_id: <%= ENV.fetch("CLOUDFLARE_ACCESS_KEY_ID", "") %>
-  secret_access_key: <%= ENV.fetch("CLOUDFLARE_SECRET_ACCESS_KEY", "") %>
+  access_key_id: <%= ENV['CLOUDFLARE_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['CLOUDFLARE_SECRET_ACCESS_KEY'] %>
+  endpoint: <%= ENV['CLOUDFLARE_ENDPOINT'] %>
+  bucket: <%= ENV['CLOUDFLARE_BUCKET'] %>
   region: auto
-  bucket: <%= ENV.fetch("CLOUDFLARE_BUCKET", "spree-#{Rails.env}") %>
+  force_path_style: true
+  upload:
+    multipart_threshold: 100MB
 
 # Use bin/rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
 # Remember not to checkin your GCS keyfile to a repository

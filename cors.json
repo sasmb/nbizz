@@ -1,23 +1,28 @@
-[
-  {
-    "AllowedOrigins": [
-      "https://spree-starter-demo-218717e30a05.herokuapp.com",
-      "https://pub-19cc664bd6bc4d87b48a0093b2f0382d.r2.dev"
-    ],
-    "AllowedMethods": [
-      "PUT",
-      "GET",
-      "POST"
-    ],
-    "AllowedHeaders": [
-      "*"
-    ],
-    "ExposeHeaders": [
-      "Origin",
-      "Content-Type",
-      "Content-MD5",
-      "Content-Disposition"
-    ],
-    "MaxAgeSeconds": 3600
-  }
-] 
+{
+  "CORSRules": [
+    {
+      "AllowedOrigins": [
+        "https://spree-starter-demo.herokuapp.com",
+        "https://www.shop.nexusbizz.com",
+        "https://shop.nexusbizz.com"
+      ],
+      "AllowedMethods": [
+        "GET",
+        "PUT",
+        "POST",
+        "DELETE"
+      ],
+      "AllowedHeaders": [
+        "*"
+      ],
+      "ExposeHeaders": [
+        "Origin",
+        "Content-Type",
+        "Content-MD5",
+        "Content-Disposition",
+        "ETag"
+      ],
+      "MaxAgeSeconds": 3600
+    }
+  ]
+}

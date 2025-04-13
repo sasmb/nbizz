@@ -3,6 +3,10 @@ envVarGroups:
     envVars:
       - key: DB_POOL
         value: 10
+      - key: REDIS_TLS_VERIFY
+        value: true
+      - key: REDIS_SSL_VERSION
+        value: TLSv1_2
 
 databases:
   - name: spree-db
@@ -33,6 +37,7 @@ services:
           type: keyvalue
           name: keyvalue
           property: connectionString
+      - fromGroup: spree-envs
   - type: worker
     name: spree-worker
     runtime: ruby
@@ -63,9 +68,13 @@ services:
     ipAllowList: []
     plan: hobby
     maxmemoryPolicy: noeviction
+    options:
+      enableTls: true
 
   - type: keyvalue
     name: keyvalue-cache
     ipAllowList: []
     plan: hobby
     maxmemoryPolicy: allkeys-lru
+    options:
+      enableTls: true
