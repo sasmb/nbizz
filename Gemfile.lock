@@ -96,7 +96,7 @@ GEM
     any_ascii (0.3.2)
     auto_strip_attributes (2.6.0)
       activerecord (>= 4.0)
-    autoprefixer-rails (10.4.19.0)
+    autoprefixer-rails (10.4.21.0)
       execjs (~> 2)
     awesome_nested_set (3.8.0)
       activerecord (>= 4.0.0, < 8.1)
@@ -149,7 +149,7 @@ GEM
     countries (7.1.1)
       unaccent (~> 0.3)
     crass (1.0.6)
-    csv (3.3.3)
+    csv (3.3.4)
     currency_select (8.1.0)
       actionview (>= 7.0.0, < 8.1)
       money (~> 6.0)
@@ -327,7 +327,7 @@ GEM
     orm_adapter (0.5.0)
     paranoia (3.0.1)
       activerecord (>= 6, < 8.1)
-    payment_icons (1.7.51)
+    payment_icons (1.7.52)
       frozen_record
       railties (>= 5.0)
       sassc-rails
@@ -343,7 +343,7 @@ GEM
     puma (6.6.0)
       nio4r (~> 2.0)
     racc (1.8.1)
-    rack (3.1.12)
+    rack (3.1.13)
     rack-session (2.1.0)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -408,21 +408,21 @@ GEM
       ffi (~> 1.12)
       logger
     rubyzip (2.4.1)
-    sass-embedded (1.86.2-aarch64-linux-gnu)
+    sass-embedded (1.86.3-aarch64-linux-gnu)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-aarch64-linux-musl)
+    sass-embedded (1.86.3-aarch64-linux-musl)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-arm-linux-gnueabihf)
+    sass-embedded (1.86.3-arm-linux-gnueabihf)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-arm-linux-musleabihf)
+    sass-embedded (1.86.3-arm-linux-musleabihf)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-arm64-darwin)
+    sass-embedded (1.86.3-arm64-darwin)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-x86_64-darwin)
+    sass-embedded (1.86.3-x86_64-darwin)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-x86_64-linux-gnu)
+    sass-embedded (1.86.3-x86_64-linux-gnu)
       google-protobuf (~> 4.30)
-    sass-embedded (1.86.2-x86_64-linux-musl)
+    sass-embedded (1.86.3-x86_64-linux-musl)
       google-protobuf (~> 4.30)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -537,7 +537,7 @@ GEM
       tailwindcss-rails
       tailwindcss-ruby (~> 3.4.17)
       turbo-rails
-    spree_stripe (1.1.0)
+    spree_stripe (1.2.0)
       importmap-rails
       spree (>= 5.0.0.alpha)
       spree_admin (>= 5.0.0.alpha)
@@ -649,7 +649,7 @@ DEPENDENCIES
   spree_i18n
   spree_sample (~> 5.0.0)
   spree_storefront (~> 5.0.0)
-  spree_stripe (~> 1.1.0)
+  spree_stripe (~> 1.2.0)
   stimulus-rails
   turbo-rails
   tzinfo-data
